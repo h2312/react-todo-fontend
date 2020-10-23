@@ -13,9 +13,9 @@ class Form extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        const {value} = e.target;
-        if(value !== ''){
-            this.props.addTodo(value);
+  
+        if(this.state.name !== ''){
+            this.props.addTodo(this.state.name);
             this.setState({ name: ''})
         } else {
             alert("Can't add empty value!");
